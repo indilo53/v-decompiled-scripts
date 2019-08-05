@@ -43,7 +43,7 @@ void __EntryFunction__()
 	{
 		func_5();
 	}
-	uLocal_19 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("instructional_buttons");
+	uLocal_19 = unk_0x67D02A194A2FC2BD("instructional_buttons");
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(uLocal_19))
 	{
 		SYSTEM::WAIT(0);
@@ -175,19 +175,19 @@ void func_3(var uParam0)
 
 void func_4()
 {
-	if (Global_14492 == 0)
+	if (Global_14532 == 0)
 	{
 		if (((((((((CONTROLS::IS_CONTROL_PRESSED(2, 189) || CONTROLS::IS_CONTROL_PRESSED(2, 190)) || CONTROLS::IS_CONTROL_PRESSED(2, 188)) || CONTROLS::IS_CONTROL_PRESSED(2, 187)) || CONTROLS::IS_CONTROL_PRESSED(2, 205)) || CONTROLS::IS_CONTROL_PRESSED(2, 206)) || CONTROLS::IS_CONTROL_PRESSED(2, 207)) || CONTROLS::IS_CONTROL_PRESSED(2, 208)) || CONTROLS::IS_CONTROL_PRESSED(2, 201)) || CONTROLS::IS_CONTROL_PRESSED(2, 202))
 		{
-			Global_14492 = 1;
+			Global_14532 = 1;
 			SYSTEM::SETTIMERA(0);
 		}
 	}
 	else if (SYSTEM::TIMERA() > 50)
 	{
-		Global_14492 = 0;
+		Global_14532 = 0;
 	}
-	if (Global_14492 == 0)
+	if (Global_14532 == 0)
 	{
 		if (CONTROLS::IS_CONTROL_PRESSED(2, 217))
 		{
@@ -253,21 +253,21 @@ void func_6(bool bParam0)
 	if (bParam0)
 	{
 		func_12();
-		if (Global_14513.f_1 == 10 || Global_14513.f_1 == 9)
+		if (Global_14553.f_1 == 10 || Global_14553.f_1 == 9)
 		{
-			GAMEPLAY::SET_BIT(&Global_2384, 16);
+			GAMEPLAY::SET_BIT(&Global_2424, 16);
 		}
-		Global_14513.f_1 = 1;
+		Global_14553.f_1 = 1;
 		if (func_11(0))
 		{
 			func_7(0);
 		}
 	}
-	else if (Global_14513.f_1 == 1)
+	else if (Global_14553.f_1 == 1)
 	{
-		if (!Global_14513.f_1 == 0)
+		if (!Global_14553.f_1 == 0)
 		{
-			Global_14513.f_1 = 3;
+			Global_14553.f_1 = 3;
 		}
 	}
 }
@@ -278,36 +278,36 @@ void func_7(int iParam0)
 	{
 		return;
 	}
-	if (Global_14681)
+	if (Global_14725)
 	{
 		func_9(0, 0);
 	}
-	if (Global_14513.f_1 == 10 || Global_14513.f_1 == 9)
+	if (Global_14553.f_1 == 10 || Global_14553.f_1 == 9)
 	{
-		GAMEPLAY::SET_BIT(&Global_2384, 16);
+		GAMEPLAY::SET_BIT(&Global_2424, 16);
 	}
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 	{
 		AUDIO::STOP_SCRIPTED_CONVERSATION(0);
 	}
-	Global_15822 = 5;
+	Global_15866 = 5;
 	if (iParam0 == 1)
 	{
-		GAMEPLAY::SET_BIT(&Global_2383, 30);
+		GAMEPLAY::SET_BIT(&Global_2423, 30);
 	}
 	else
 	{
-		GAMEPLAY::CLEAR_BIT(&Global_2383, 30);
+		GAMEPLAY::CLEAR_BIT(&Global_2423, 30);
 	}
 	if (!func_8())
 	{
-		Global_14513.f_1 = 3;
+		Global_14553.f_1 = 3;
 	}
 }
 
 int func_8()
 {
-	if (Global_14513.f_1 == 1 || Global_14513.f_1 == 0)
+	if (Global_14553.f_1 == 1 || Global_14553.f_1 == 0)
 	{
 		return 1;
 	}
@@ -320,42 +320,42 @@ void func_9(bool bParam0, bool bParam1)
 	{
 		if (func_11(0))
 		{
-			Global_14681 = 1;
+			Global_14725 = 1;
 			if (bParam1)
 			{
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_14450);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_14490);
 			}
-			Global_14441 = { Global_14459[Global_14458 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_14441);
+			Global_14481 = { Global_14499[Global_14498 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_14481);
 		}
 	}
-	else if (Global_14681 == 1)
+	else if (Global_14725 == 1)
 	{
-		Global_14681 = 0;
-		Global_14441 = { Global_14466[Global_14458 /*3*/] };
+		Global_14725 = 0;
+		Global_14481 = { Global_14506[Global_14498 /*3*/] };
 		if (bParam1)
 		{
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_14450);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_14490);
 		}
 		else
 		{
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_14441);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_14481);
 		}
 	}
 }
 
 bool func_10()
 {
-	return GAMEPLAY::IS_BIT_SET(Global_1678593, 19);
+	return GAMEPLAY::IS_BIT_SET(Global_1681628, 19);
 }
 
 int func_11(int iParam0)
 {
 	if (iParam0 == 1)
 	{
-		if (Global_14513.f_1 > 3)
+		if (Global_14553.f_1 > 3)
 		{
-			if (GAMEPLAY::IS_BIT_SET(Global_2383, 14))
+			if (GAMEPLAY::IS_BIT_SET(Global_2423, 14))
 			{
 				return 1;
 			}
@@ -373,7 +373,7 @@ int func_11(int iParam0)
 	{
 		return 1;
 	}
-	if (Global_14513.f_1 > 3)
+	if (Global_14553.f_1 > 3)
 	{
 		return 1;
 	}
@@ -382,10 +382,10 @@ int func_11(int iParam0)
 
 void func_12()
 {
-	if (Global_14513.f_1 == 9 || Global_14513.f_1 == 10)
+	if (Global_14553.f_1 == 9 || Global_14553.f_1 == 10)
 	{
-		Global_15875 = 0;
-		Global_15871 = 1;
+		Global_15919 = 0;
+		Global_15915 = 1;
 	}
 }
 

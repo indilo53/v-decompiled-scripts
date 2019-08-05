@@ -175,7 +175,7 @@ int func_3()
 
 var func_4()
 {
-	return Global_1625435[PLAYER::PLAYER_ID() /*560*/].f_11;
+	return Global_1626536[PLAYER::PLAYER_ID() /*603*/].f_11;
 }
 
 bool func_5(int iParam0, bool bParam1)
@@ -187,16 +187,16 @@ bool func_5(int iParam0, bool bParam1)
 			return 0;
 		}
 	}
-	return Global_1625435[iParam0 /*560*/].f_11 != func_3();
+	return Global_1626536[iParam0 /*603*/].f_11 != func_3();
 }
 
 int func_6(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		if (Global_1625435[iParam0 /*560*/].f_11 != func_3())
+		if (Global_1626536[iParam0 /*603*/].f_11 != func_3())
 		{
-			return Global_1625435[iParam0 /*560*/].f_11 == iParam0;
+			return Global_1626536[iParam0 /*603*/].f_11 == iParam0;
 		}
 	}
 	return 0;
@@ -221,7 +221,7 @@ int func_8(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return Global_1589747[iParam0 /*790*/].f_273.f_255;
+		return Global_1589819[iParam0 /*818*/].f_273.f_258;
 	}
 	return 0;
 }
@@ -230,7 +230,7 @@ int func_9(int iParam0)
 {
 	if (iParam0 != func_3())
 	{
-		return Global_1589747[iParam0 /*790*/].f_273.f_255 != 0;
+		return Global_1589819[iParam0 /*818*/].f_273.f_258 != 0;
 	}
 	return 0;
 }
@@ -830,7 +830,7 @@ int func_23(int iParam0)
 			return 1;
 		}
 	}
-	if (GAMEPLAY::IS_BIT_SET(Global_2423801[iParam0 /*413*/].f_195, 2))
+	if (GAMEPLAY::IS_BIT_SET(Global_2424047[iParam0 /*416*/].f_195, 2))
 	{
 		return 1;
 	}
@@ -852,7 +852,7 @@ bool func_25(int iParam0, int iParam1)
 	}
 	else
 	{
-		bVar0 = Global_1589747[iParam0 /*790*/].f_211 == 8;
+		bVar0 = Global_1589819[iParam0 /*818*/].f_211 == 8;
 	}
 	if (iParam1 == 1)
 	{
@@ -874,7 +874,7 @@ int func_26(int iParam0, bool bParam1)
 	{
 		iVar1 = func_27();
 	}
-	if (Global_1312837[iVar1] == 1)
+	if (Global_1312847[iVar1] == 1)
 	{
 		if (bParam1)
 		{
@@ -883,7 +883,7 @@ int func_26(int iParam0, bool bParam1)
 	}
 	else
 	{
-		iVar0 = Global_1312730[iVar1];
+		iVar0 = Global_1312739[iVar1];
 		if (bParam1)
 		{
 		}
@@ -893,6 +893,6 @@ int func_26(int iParam0, bool bParam1)
 
 int func_27()
 {
-	return Global_1312736;
+	return Global_1312745;
 }
 

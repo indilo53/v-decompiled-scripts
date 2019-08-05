@@ -248,6 +248,6 @@ void func_12(var uParam0)
 
 var func_13()
 {
-	return GRAPHICS::REQUEST_SCALEFORM_MOVIE("SPLASH_TEXT");
+	return unk_0x67D02A194A2FC2BD("SPLASH_TEXT");
 }
 

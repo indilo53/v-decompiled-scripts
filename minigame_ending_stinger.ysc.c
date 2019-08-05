@@ -110,7 +110,7 @@ int func_2(int iParam0)
 {
 	if (func_3(iParam0))
 	{
-		return Global_106070.f_28022[iParam0 /*29*/];
+		return Global_106565.f_28044[iParam0 /*29*/];
 	}
 	else if (iParam0 != 145)
 	{

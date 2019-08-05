@@ -11,14 +11,14 @@ void __EntryFunction__()
 		func_10();
 	}
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(0);
-	GAMEPLAY::CLEAR_BIT(&(Global_106070.f_9988.f_25), 1);
+	GAMEPLAY::CLEAR_BIT(&(Global_106565.f_10010.f_25), 1);
 	func_7();
 	SCRIPT::SET_NO_LOADING_SCREEN(1);
 	if (!CAM::IS_SCREEN_FADED_OUT())
 	{
 		CAM::DO_SCREEN_FADE_OUT(0);
 	}
-	iLocal_0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("OPENING_CREDITS");
+	iLocal_0 = unk_0x67D02A194A2FC2BD("OPENING_CREDITS");
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_0))
 	{
 		func_7();
@@ -34,7 +34,7 @@ void __EntryFunction__()
 	while (!CUTSCENE::IS_CUTSCENE_PLAYING())
 	{
 		func_7();
-		if (!GAMEPLAY::IS_BIT_SET(Global_106070.f_9988.f_25, 1))
+		if (!GAMEPLAY::IS_BIT_SET(Global_106565.f_10010.f_25, 1))
 		{
 			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_0, 255, 255, 255, 255, 0);
 			if (!iLocal_2)
@@ -48,7 +48,7 @@ void __EntryFunction__()
 			}
 			else if (GAMEPLAY::GET_GAME_TIMER() > iLocal_1)
 			{
-				GAMEPLAY::SET_BIT(&(Global_106070.f_9988.f_25), 1);
+				GAMEPLAY::SET_BIT(&(Global_106565.f_10010.f_25), 1);
 				if (GAMEPLAY::_0x6FDDF453C0C756EC() || GAMEPLAY::IS_PC_VERSION())
 				{
 					func_4(1, 1);
@@ -67,7 +67,7 @@ void __EntryFunction__()
 
 void func_1()
 {
-	Global_93271 = 1;
+	Global_93721 = 1;
 }
 
 int func_2()
@@ -76,18 +76,18 @@ int func_2()
 	{
 		return 0;
 	}
-	if (Global_93271.f_8)
+	if (Global_93721.f_8)
 	{
-		if (Global_93271.f_10 > 0)
+		if (Global_93721.f_10 > 0)
 		{
 			return 0;
 		}
 	}
-	else if (Global_93271.f_10 > 1)
+	else if (Global_93721.f_10 > 1)
 	{
 		return 0;
 	}
-	Global_93271.f_10++;
+	Global_93721.f_10++;
 	return 1;
 }
 
@@ -97,13 +97,13 @@ int func_3(bool bParam0)
 	{
 		return 1;
 	}
-	return GAMEPLAY::IS_BIT_SET(Global_71453, 0);
+	return GAMEPLAY::IS_BIT_SET(Global_71838, 0);
 }
 
 void func_4(int iParam0, int iParam1)
 {
-	Global_93271.f_7 = iParam0;
-	Global_93271.f_8 = iParam1;
+	Global_93721.f_7 = iParam0;
+	Global_93721.f_8 = iParam1;
 }
 
 void func_5(char* sParam0)
@@ -147,12 +147,12 @@ void func_8()
 
 void func_9()
 {
-	Global_17228.f_134 = 1;
+	Global_17272.f_134 = 1;
 }
 
 void func_10()
 {
-	GAMEPLAY::SET_BIT(&(Global_106070.f_9988.f_25), 1);
+	GAMEPLAY::SET_BIT(&(Global_106565.f_10010.f_25), 1);
 	if (iLocal_0 != 0)
 	{
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_0);
